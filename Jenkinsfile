@@ -20,13 +20,13 @@ pipeline{
         }
         stage('Configuration Python'){
             steps{
-                bat 'python3 --version'
-                bat 'python3 - pip install uv'
+                bat 'C:\Users\hp\AppData\Local\Programs\Python\Python311\python.exe --version'
+                bat 'C:\Users\hp\AppData\Local\Programs\Python\Python311\python.exe - pip install uv'
             }
         }
         stage('Installation des dépendances') {
             steps {
-                bat 'uv sync --all-groups'
+                bat 'C:\Users\hp\AppData\Local\Programs\Python\Python311\python.exe -m uv sync --all-groups'
             }
         }
         stage('Exécution des tests') {
